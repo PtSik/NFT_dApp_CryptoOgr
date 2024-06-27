@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0xd4ff6e25B123044E0895d82CF52Db784D3196e24",
+  "SCAN_LINK": "https://sepolia.etherscan.io/token/0xd4ff6e25B123044E0895d82CF52Db784D3196e24",
+  "NETWORK": {
+    "NAME": "Sepolia",
+    "SYMBOL": "SepoliaETH",
+    "ID": 11155111
+  },
+  "NFT_NAME": "Crypto Ogr",
+  "SYMBOL": "CO",
+  "MAX_SUPPLY": 499,
+  "WEI_COST": 100000000000000,
+  "DISPLAY_COST": 0.0001,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/cryptoogr",
+  "SHOW_BACKGROUND": false
+}
