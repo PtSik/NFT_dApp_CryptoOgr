@@ -79,8 +79,9 @@ const Portfolio = () => {
             />
           </Link>
         </PortfolioHeader>
-        <PortfolioTitle>Your Portfolio</PortfolioTitle>
         <Divider />
+        <PortfolioTitle>Your Portfolio</PortfolioTitle>
+        <h2>Click the image to see more details about the NFT at Opensea.</h2>
         <s.SpacerSmall />
         {loading ? (
           <p>Loading NFTs...</p>

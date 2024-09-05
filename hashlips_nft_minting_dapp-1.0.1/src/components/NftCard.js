@@ -20,7 +20,7 @@ const Image = styled.img`
 `;
 
 const NFTCard = ({ tokenId, tokenURI, contractAddress }) => {
-  console.log("Rendering NFTCard with tokenId:", tokenId); // Sprawdź, czy komponent renderuje się
+  console.log("Rendering NFTCard with tokenId:", tokenId); 
 
   const [metadata, setMetadata] = useState(null);
 
