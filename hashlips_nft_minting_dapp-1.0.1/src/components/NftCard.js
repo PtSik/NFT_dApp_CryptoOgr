@@ -9,6 +9,7 @@ const Card = styled.div`
   width: 200px;
   margin: 10px;
   text-align: center;
+  cursor: pointer;
 `;
 
 const Image = styled.img`
@@ -18,7 +19,9 @@ const Image = styled.img`
   margin-bottom: 10px;
 `;
 
-const NFTCard = ({ tokenId, tokenURI }) => {
+const NFTCard = ({ tokenId, tokenURI, contractAddress }) => {
+  console.log("Rendering NFTCard with tokenId:", tokenId); // Sprawdź, czy komponent renderuje się
+
   const [metadata, setMetadata] = useState(null);
 
   useEffect(() => {
@@ -27,7 +30,7 @@ const NFTCard = ({ tokenId, tokenURI }) => {
         const fixedTokenURI = tokenURI.startsWith("ipfs://")
           ? tokenURI.replace("ipfs://", "https://ipfs.io/ipfs/")
           : tokenURI;
-          
+
         const response = await fetch(fixedTokenURI);
         const data = await response.json();
         setMetadata(data);
@@ -39,8 +42,14 @@ const NFTCard = ({ tokenId, tokenURI }) => {
     fetchMetadata();
   }, [tokenURI]);
 
+  const handleClick = () => {
+    console.log("Clicked on NFT with ID:", tokenId);
+    const openseaUrl = `https://testnets.opensea.io/assets/sepolia/0xd4ff6e25B123044E0895d82CF52Db784D3196e24/${tokenId}`;
+    window.open(openseaUrl, "_blank");
+  };
+
   return (
-    <Card>
+    <Card onClick={handleClick}>
       {metadata ? (
         <>
           <Image
